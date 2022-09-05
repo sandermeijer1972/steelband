@@ -30,11 +30,6 @@ a:visited {
     color:#FFF;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 .header {
     max-width: 1200px;
     margin: 0 auto;
@@ -98,6 +93,9 @@ ul {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            width: 95%;
+            list-style-type: none;
+            padding: 0;
             & li {
                 font-size: 17px;
                 color: #666666;
@@ -114,40 +112,84 @@ ul {
                 cursor: pointer;
             }
             @media(min-width: 550px) {
+                display: flex;
                 flex-direction: row;
                 gap: 5px;
                 flex-wrap: wrap;
-                justify-content: center;                            
+                justify-content: center;
+                width:auto;                          
             }            
         }
     }
 }
 
-.dropdown-content {
+.showmenu {
     display: none;
-    position: absolute;
-    z-index: 1;
     @media(min-width: 550px) {
+        display: flex;
+    }
+}
+
+.dropbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__icon {
+        display: flex;
+        flex-direction: row;
+        @media(min-width: 550px) {
+            display: none;
+        }  
+        & .nonactive {
+            display: none;
+        }      
+    }    
+}
+
+.dropbtn i {
+    display: none;
+    @media(min-width: 550px) {
+        display: contents;
+    }
+}
+
+.dropdown-content {
+    list-style-type: '-';
+    & li {
+        padding: 5px;
+    }
+    & li:nth-child(1) {
+        padding-top: 10px;
+    }
+    @media(min-width: 550px) {
+        list-style-type: none;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        padding: 0;
         padding-top: 18px;
+        & li {
+            width: 250px;
+            background-color: #000;
+            color: #999999;
+            padding: 5px 10px;
+            transition-duration: 500ms;
+        }
+        & li:hover {
+            color: #FFF;
+            width: 225px;
+            padding-left: 35px;
+        }
     }
     @media(min-width: 920px) {
         padding-top: 33px;
     }
-    & li {
-        width: 250px;
-        background-color: #000;
-        color: #FFF;
-        padding: 5px 10px;
-        transition-duration: 500ms;
-    }
-    & li:hover {
-        color: #ce1126;
-        transform: translateX(25px);
-        width: 225px;
-    }
+    
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
 
