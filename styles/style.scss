@@ -61,10 +61,10 @@ ul {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        @media(min-width: 900px) {
+        @media(min-width: 920px) {
             flex-direction: row;
             padding: 0 15px;
-        }
+        }        
         &--title {
             display: flex;
             flex-direction: column;
@@ -82,26 +82,45 @@ ul {
                 color: #777777;
             }
         }
+        &--hamburger {
+            background-color: #000;
+            width: 98%;
+            text-align: center;
+            @media(min-width: 550px) {
+                display: none;
+            }
+            & img {
+                width: 50px;
+                margin-top: 3px;
+            }
+        }
         &--menu {
             display: flex;
-            flex-direction: row;
-            gap: 5px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
             & li {
+                font-size: 17px;
+                color: #666666;
                 padding: 2px 5px;
-                font-size: 18px;
+                @media(min-width: 920px) {
+                    font-size: 18px;
+                }
+            }
+            & .active {
+                color: #ce1126;
             }
             & li:hover {
                 color: #ce1126;
                 cursor: pointer;
             }
+            @media(min-width: 550px) {
+                flex-direction: row;
+                gap: 5px;
+                flex-wrap: wrap;
+                justify-content: center;                            
+            }            
         }
     }
-}
-
-.active {
-    color: #ce1126;
 }
 
 .dropdown-content {
@@ -111,18 +130,20 @@ ul {
     @media(min-width: 550px) {
         padding-top: 18px;
     }
-    @media(min-width: 900px) {
+    @media(min-width: 920px) {
         padding-top: 33px;
     }
     & li {
+        width: 250px;
         background-color: #000;
         color: #FFF;
         padding: 5px 10px;
         transition-duration: 500ms;
     }
     & li:hover {
-        color: #FFF;
+        color: #ce1126;
         transform: translateX(25px);
+        width: 225px;
     }
 }
 
