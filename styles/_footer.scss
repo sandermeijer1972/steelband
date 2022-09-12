@@ -4,19 +4,42 @@
     padding: 15px 10px;
     background-color: #333333;
     border-top: 6px solid #CE1126;
-    @media(min-width: 930px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
+    display: grid;
+    grid-template: auto auto auto / auto;
+    grid-template-areas: 
+    "A"
+    "B"
+    "C";
+    gap: 20px;
+    @media(min-width: 650px) {
+        grid-template: auto auto / 1fr 1fr;
+        grid-template-areas:
+        "A A"
+        "B C";
     }
-    &__lid {
-        &--header {
-            border-bottom: 1px solid #222222;
-            text-transform: uppercase;
-            color: #EEEEEE;
-            padding: 10px 0 15px;
-            font-size: 18px;
-        }
+    @media(min-width: 930px) {        
+        grid-template: auto / 1fr 1fr 1fr;
+        grid-template-areas: "A B C";
+    }
+    &--header {
+        border-bottom: 1px solid #222222;
+        text-transform: uppercase;
+        color: #EEEEEE;
+        padding: 20px 0 15px;
+        font-size: 18px;
+    }
+    &--footer {
+        font-size: 17px;
+        color: #F33F3F;
+        font-weight: 700;
+        margin-top: 35px;
+    }
+    &--footer:hover {
+        color: #AAAAAA;
+        cursor: pointer;
+    }
+    &__lid { 
+        grid-area: A;       
         &--content {
             display: flex;
             flex-direction: column;
@@ -37,8 +60,46 @@
         }
         &--footer:hover {
             color: #AAAAAA;
+            cursor: pointer;
         }
-    }    
+    }   
+    &__tourschema {
+        grid-area: B;
+        &--content h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            color: #F33F3F;
+        }
+        &--content h3:hover {
+            color: #AAAAAA;
+            cursor: pointer;
+        }
+        &--content p {
+            font-size: 15px;
+            margin: 5px 0 25px;
+            color: #AAAAAA;
+        }        
+    }   
+    &__berichten {
+        grid-area: C;
+        &--content {
+            font-size: 15px;
+            color: #AAAAAA;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 10px 0;
+            & span {
+                color: #F33F3F;
+                font-size: 16px;
+            }
+            & span:hover {
+                color: #AAAAAA;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .copyright {
