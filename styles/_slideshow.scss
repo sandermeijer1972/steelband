@@ -1,0 +1,46 @@
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+  
+
+.slideshow {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+    &__mySlides {
+        &--title {
+            position: absolute;
+            top: 40%;
+            font-size: 25px;
+            font-weight: bold;
+            color: #EEEEEE;
+            background-color: #222222;
+            padding: 5px 15px 5px 40px;
+            opacity: 0.7;
+            @media(min-width: 800px) {
+                font-size: 50px;
+            }
+        }
+        &--text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #222222;
+            color: #EEEEEE;
+            font-size: 16px;
+            text-align: center;
+            padding: 5px 15px;
+            opacity: 0.6;
+            @media(min-width: 800px) {
+                font-size: 30px;
+            }
+        }
+    }
+}
