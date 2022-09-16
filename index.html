@@ -7,6 +7,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./steel-icon.png">
     <script src="https://kit.fontawesome.com/3007742baa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <script defer src="./scripts/data.js"></script>
     <script defer src="./scripts/script.js"></script>
     <title>Steelband Tavenu - Swingt de pan uit!</title>
 </head>
@@ -35,54 +36,28 @@
                 <img src="./images/hamb-wit.png">
             </div>
             <ul id="menu" class="header__nav--menu showmenu">
-                <li class="active">Home</li>
-                <li>Tourschema</li>
+                <li class="active" id="home">Home</li>
+                <li id="tour">Tourschema</li>
                 <li class="dropdown">
                     <div class="dropbtn">
-                        <div>Over ons <i class="fa fa-caret-down"></i></div>                        
+                        <div id="about">Over ons <i class="fa fa-caret-down"></i></div>                        
                     </div>
                     <ul class="dropdown-content">
-                        <li>Wie zijn wij?</li>
-                        <li>Geschiedenis</li>
-                        <li>Optredens</li>
-                        <li>Muzikanten</li>
-                        <li>Muziekvereniging Tavenu</li>
+                        <li id="who">Wie zijn wij?</li>
+                        <li id="history">Geschiedenis</li>
+                        <li id="performance">Optredens</li>
+                        <li id="members">Muzikanten</li>
+                        <li id="tavenu">Muziekvereniging Tavenu</li>
                     </ul>
                 </li>
-                <li>Foto's</li>
-                <li>Contact</li>
-                <li>Privacybeleid</li>
+                <li id="photos">Foto's</li>
+                <li id="contact">Contact</li>
+                <li id="privacy">Privacybeleid</li>
             </ul>
         </nav>
     </header>
     <main id="main">
-        <div class="slideshow">
-            <div class="slideshow__mySlides fade">
-                <img src="./images/loopgroep.jpg">
-                <div class="slideshow__mySlides--title">Groepsfoto</div>
-                <div class="slideshow__mySlides--text">nieuwe foto met alle muzikanten</div>
-            </div>
-            <div class="slideshow__mySlides fade">
-                <img src="./images/mza.jpg">
-                <div class="slideshow__mySlides--title">MZA 2022</div>
-                <div class="slideshow__mySlides--text">midzomeravondfestival in De Kwakel</div>
-            </div>
-            <div class="slideshow__mySlides fade">
-                <img src="./images/opdekar.jpg">
-                <div class="slideshow__mySlides--title">Sinterklaas</div>
-                <div class="slideshow__mySlides--text">rondrit door Uithoorn en De Kwakel met Sinterklaas</div>
-            </div>
-            <div class="slideshow__mySlides fade">
-                <img src="./images/mijdrecht.jpg">
-                <div class="slideshow__mySlides--title">Marathon</div>
-                <div class="slideshow__mySlides--text">langs de route van de Ronde Venen Marathon</div>
-            </div>
-            <div class="slideshow__mySlides fade">
-                <img src="./images/kinderoptocht.jpg">
-                <div class="slideshow__mySlides--title">Kinderoptocht</div>
-                <div class="slideshow__mySlides--text">de kinderoptocht met de kermis in De Kwakel</div>
-            </div>
-        </div>
+        
     </main>
     <footer class="footer">
         <div class="footer__lid">
@@ -99,7 +74,7 @@
                 </div>
                 <img src="./images/jeugd.jpg">
             </div>
-            <div class="footer--footer">
+            <div class="footer--footer" id="footercontact">
                 Ga naar de contactpagina voor meer informatie.
             </div>
         </div>
