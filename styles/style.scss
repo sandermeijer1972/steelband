@@ -1,6 +1,7 @@
 @import "./header";
 @import "./footer";
 @import "./slideshow";
+@import "./privacy";
 
 body:before {
     content: "";
@@ -29,6 +30,11 @@ img {
 
 a {
     text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;  
 }
 // a:visited {
 //     color:#FFF;

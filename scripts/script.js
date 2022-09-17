@@ -189,6 +189,31 @@ function makePrivacyPage() {
     clearMenu();
     privacyButton.classList.add('active');
     main.innerHTML = "";
+    const newArticle = document.createElement('article');
+    newArticle.classList.add('privacy');
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('privacy__title');
+    newDiv.innerText = "Privacy beleid";
+    newArticle.appendChild(newDiv);
+    for(i=0; i<2; i++) {
+        const newSection = document.createElement('section');
+        newSection.classList.add('privacy__section');
+        newSection.innerText = privacyData[i];
+        newArticle.appendChild(newSection);
+    };
+    const newUl = document.createElement('ul');
+    newUl.classList.add('privacy__list');
+    for(i=0; i<6; i++) {
+        const newLi = document.createElement('li');
+        newLi.innerText = privacyData[2][i];
+        newUl.appendChild(newLi);
+    };
+    newArticle.appendChild(newUl);
+    const lastSection = document.createElement('section');
+    lastSection.classList.add('privacy__section');
+    lastSection.innerText = privacyData[3];
+    newArticle.appendChild(lastSection);
+    main.appendChild(newArticle);    
 };
 
 privacyButton.addEventListener('click', makePrivacyPage);
