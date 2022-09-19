@@ -26,6 +26,30 @@ const slideData = [
     },
 ];
 
+const gridData = [
+    {
+        id: "tourbtn",
+        photo: "./images/landkaart.jpg",
+        title: "Tourschema",
+        sub: "wil je ons een keer zien spelen?",
+        button: "bekijk de lijst",
+    },
+    {
+        id: "whobtn",
+        photo: "./images/logo.jpg",
+        title: "Even voorstellen",
+        sub: "wat is Steelband Tavenu?",
+        button: "lees verder",
+    },
+    {
+        id: "membersbtn",
+        photo: "./images/muzikanten.jpg",
+        title: "Muzikanten",
+        sub: "de muzikanten stellen zich voor",
+        button: "bekijk ze hier",
+    },
+];
+
 const privacyData = [
     "Steelband Tavenu maakt onderdeel uit van Muziekvereniging Tavenu. Muziekvereniging Tavenu hecht veel waarde aan de bescherming van uw persoonsgegevens. In deze Privacy Policy willen we heldere en transparante informatie geven over hoe wij omgaan met persoonsgegevens.",
     "Wij doen er alles aan om uw privacy te waarborgen en gaan daarom zorgvuldig om met persoonsgegevens. Muziekvereniging Tavenu houdt zich in alle gevallen aan de toepassselijke wet- en regelgeving, waaronder de Algemene Vordering Gegevensbescherming. Dit brengt met zich mee dat wij in ieder geval:",

@@ -79,6 +79,45 @@ function showSlides() {
     setTimeout(showSlides, 5000); // Change image every 5 seconds
 };
 
+
+// HOMEGRID
+
+function makeHomegrid() {
+    const newGrid = document.createElement('div');
+    newGrid.classList.add('homegrid');
+    for(i=0; i<3; i++) {
+        const newBlock = document.createElement('div');
+        newBlock.classList.add('homegrid__block');
+        const newImg = document.createElement('img');
+        newImg.src = gridData[i].photo;
+        newBlock.appendChild(newImg);
+        const newTitle = document.createElement('div');
+        newTitle.classList.add('homegrid__block--title');
+        newTitle.innerText = gridData[i].title;
+        newBlock.appendChild(newTitle);
+        const newSub = document.createElement('div');
+        newSub.classList.add('homegrid__block--sub');
+        newSub.innerText = gridData[i].sub;
+        newBlock.appendChild(newSub);
+        const newButton = document.createElement('div');
+        newButton.classList.add('homegrid__block--button');
+        newButton.id = gridData[i].id;
+        newButton.innerText = gridData[i].button;
+        newBlock.appendChild(newButton);
+        newGrid.appendChild(newBlock);
+    };
+    main.appendChild(newGrid);  
+    const tourbtn = document.getElementById('tourbtn');
+    tourbtn.addEventListener('click', makeTourschema);
+    const whobtn = document.getElementById('whobtn');
+    whobtn.addEventListener('click', makeWhoPage);
+    const membersbtn = document.getElementById('membersbtn'); 
+    membersbtn.addEventListener('click', makeMusicians);     
+};
+
+makeHomegrid();
+
+
 // HOME BUTTON
 
 function makeHomepage() {
@@ -88,6 +127,7 @@ function makeHomepage() {
     makeSlideshow();
     let slideIndex = 0;
     showSlides();
+    makeHomegrid();
 };
 
 homeButton.addEventListener('click', makeHomepage);

@@ -1,0 +1,46 @@
+.homegrid {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(min-width: 770px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    &__block {
+        margin: 5px;
+        border: solid 1px #AAAAAA;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        & img {
+            @media(min-width: 450px) {
+                width: 425px;
+            }
+        } 
+        &--title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333333;
+            margin: 10px 0;
+        }
+        &--sub {
+            font-size: 16px;
+            color: #999999;
+            margin: 10px 0;
+        }
+        &--button {
+            background-color: #CE1126;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px;
+            margin: 5px 0 10px;
+        }
+        &--button:hover {
+            background-color: #000;
+            cursor: pointer;
+        }
+    }
+}
