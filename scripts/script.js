@@ -194,6 +194,21 @@ function makeTavenu() {
     clearMenu();
     aboutButton.classList.add('active');
     main.innerHTML = "";
+    const newArticle = document.createElement('article');
+    newArticle.classList.add('tavenu');
+    for(i=0; i<2; i++) {
+        const newSection = document.createElement('section');
+        newSection.classList.add('tavenu__section');
+        newSection.innerText = tavenuData[i];
+        newArticle.appendChild(newSection);
+    };
+    const newA = document.createElement('a');
+    newA.classList.add('tavenu__link');
+    newA.href = tavenuData[3].url;
+    newA.target = "_blank";
+    newA.innerText = tavenuData[2];
+    newArticle.appendChild(newA);
+    main.appendChild(newArticle);
 };
 
 tavenuButton.addEventListener('click', makeTavenu);

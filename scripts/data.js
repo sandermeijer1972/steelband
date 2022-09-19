@@ -50,6 +50,13 @@ const gridData = [
     },
 ];
 
+const tavenuData = [
+    "De steelband is onderdeel van Muziekvereniging TAVENU uit De Kwakel.",
+    "Alle aanvullende informatie over o.a. het bestuur, huishoudelijk reglement, contributie, etc is terug te vinden op de volgende website:",
+    "www.tavenu-dekwakel.nl",
+    {url: "https://tavenu-dekwakel.nl"},
+];
+
 const privacyData = [
     "Steelband Tavenu maakt onderdeel uit van Muziekvereniging Tavenu. Muziekvereniging Tavenu hecht veel waarde aan de bescherming van uw persoonsgegevens. In deze Privacy Policy willen we heldere en transparante informatie geven over hoe wij omgaan met persoonsgegevens.",
     "Wij doen er alles aan om uw privacy te waarborgen en gaan daarom zorgvuldig om met persoonsgegevens. Muziekvereniging Tavenu houdt zich in alle gevallen aan de toepassselijke wet- en regelgeving, waaronder de Algemene Vordering Gegevensbescherming. Dit brengt met zich mee dat wij in ieder geval:",

@@ -427,6 +427,26 @@
   cursor: pointer;
 }
 
+.tavenu {
+  background-color: white;
+  opacity: 0.9;
+  border-top: solid 1px #DDDDDD;
+  padding: 30px;
+  color: #888888;
+}
+.tavenu__section {
+  font-size: 18px;
+  margin: 25px 0;
+}
+.tavenu__link {
+  color: #ED1126;
+  font-size: 20px;
+  font-weight: bold;
+}
+.tavenu__link:hover {
+  color: #000;
+}
+
 body:before {
   content: "";
   display: block;
